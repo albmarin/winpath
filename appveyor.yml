@@ -14,9 +14,5 @@ install:
 test_script:
   - "%PYTHON%\\Scripts\\tox.exe"
 
-deploy:
-  - provider: Environment
-    name: production
-    on:
-      branch: master
-      APPVEYOR_REPO_TAG: true
+deploy_script:
+  - ps: IF ($env:APPVEYOR_REPO_TAG -eq "true") { %PYTHON%\\Scripts\\flit.exe publish }

@@ -77,7 +77,7 @@ exclude = '''
 
 
 [pycalver]
-current_version = "v202002.0001-alpha"
+current_version = "v202002.0001-beta"
 version_pattern = "{pycalver}"
 commit = true
 tag = true
