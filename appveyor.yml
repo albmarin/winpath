@@ -9,6 +9,14 @@ build: off
 
 install:
   - "%PYTHON%\\python.exe -m pip install tox"
+  - "%PYTHON%\\python.exe -m pip install ."
 
 test_script:
   - "%PYTHON%\\Scripts\\tox.exe"
+
+deploy:
+  - provider: Environment
+    name: production
+    on:
+      branch: master
+      APPVEYOR_REPO_TAG: true
