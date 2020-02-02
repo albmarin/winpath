@@ -2,14 +2,13 @@
 ---
 environment:
   matrix:
-  - TOXENV: py35
-  - TOXENV: py36
-  - TOXENV: py37
+    - PYTHON: "C:\\Python36"
+    - PYTHON: "C:\\Python37"
 
 build: off
 
 install:
-- pip install tox
+  - "%PYTHON%\\python.exe -m pip install tox"
 
 test_script:
-- tox
+  - "%PYTHON%\\Scripts\\tox.exe"
