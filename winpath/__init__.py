@@ -25,7 +25,7 @@ from .main import (
     get_recent,
 )
 
-__version__ = "202002.1b0"
+__version__ = "202002.2"
 
 __all__ = [
     get_local_appdata,
