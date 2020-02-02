@@ -85,9 +85,9 @@ push = true
 
 [pycalver.file_patterns]
 "pyproject.toml" = [
-    'current_version = "{version}"',
+    'current_version = "{pycalver}"',
 ]
 
 "winpath/__init__.py" = [
-    '__version__ = "{pep440_pycalver}"',
+    '__version__ = "{pep440_version}"',
 ]
